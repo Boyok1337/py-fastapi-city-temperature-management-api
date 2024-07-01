@@ -9,7 +9,7 @@ from city.models import City
 load_dotenv()
 
 WEATHER_API_KEY = os.environ["WEATHER_API_KEY"]
-URL = "https://api.weatherapi.com/v1/current.json"
+URL = os.environ["WEATHER_API_URL"]
 
 
 async def get_weather_temperatures(db: AsyncSession) -> dict:
